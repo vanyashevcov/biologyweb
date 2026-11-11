@@ -1,0 +1,134 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  background: var(--dark);
+  color: var(--on-dark);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  animation: fade 240ms ease;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .overlay {
+    animation: none;
+  }
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+  padding: 16px var(--page-pad);
+  padding-top: calc(16px + env(safe-area-inset-top, 0px));
+}
+
+.title {
+  font-size: 20px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.button {
+  min-height: 48px;
+  padding: 0 18px;
+  border-radius: var(--r-control);
+  border: 1.5px solid rgba(234, 243, 242, 0.45);
+  background: transparent;
+  color: var(--on-dark);
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.button:hover {
+  background: rgba(234, 243, 242, 0.08);
+}
+
+.button[aria-pressed='true'] {
+  border-color: var(--on-dark-accent);
+  color: var(--on-dark-accent);
+}
+
+.primary {
+  border: 0;
+  background: var(--on-dark-accent);
+  color: var(--dark);
+}
+
+.primary:hover {
+  background: #a8e0da;
+}
+
+.button:focus-visible {
+  outline: 3px solid var(--on-dark-accent);
+  outline-offset: 2px;
+}
+
+.stage {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  padding: 8px var(--page-pad) calc(32px + env(safe-area-inset-bottom, 0px));
+}
+
+.frame {
+  position: relative;
+  width: min(100%, 1100px, calc((100vh - 260px) * 16 / 9));
+  min-width: min(100%, 320px);
+  aspect-ratio: 16 / 9;
+  border-radius: var(--r-card);
+  overflow: hidden;
+  background: #000000;
+}
+
+.media {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+.caption {
+  position: absolute;
+  left: 50%;
+  bottom: 56px;
+  transform: translateX(-50%);
+  max-width: 90%;
+  padding: 6px 12px;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.78);
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 1.4;
+  text-align: center;
+  pointer-events: none;
+}
+
+.text {
+  width: min(100%, 1100px);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.textTitle {
+  font-size: 14px;
+  color: var(--on-dark-accent);
+}

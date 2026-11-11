@@ -1,0 +1,143 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  border-radius: 12px;
+  background: var(--lab-tint);
+  border: 1.5px solid var(--lab);
+}
+
+.bannerIcon {
+  flex-shrink: 0;
+  color: var(--lab);
+}
+
+.chip {
+  flex-shrink: 0;
+  min-width: 52px;
+  height: 36px;
+  padding: 0 10px;
+  border-radius: 18px;
+  background: var(--spread);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.bannerText {
+  flex-grow: 1;
+  font-size: 16px;
+}
+
+.timer {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.functions {
+  margin: 0;
+  padding-left: 24px;
+  font-size: 16px;
+  line-height: 1.35;
+}
+
+.functions li {
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(16, 40, 43, 0.08);
+}
+
+.key {
+  display: flex;
+  gap: 8px;
+}
+
+.digit,
+.digitEmpty {
+  width: 50px;
+  height: 60px;
+  border-radius: var(--r-control);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 26px;
+}
+
+.digit {
+  background: var(--lab);
+  color: #ffffff;
+}
+
+.digitEmpty {
+  border: 2px dashed color-mix(in srgb, var(--lab) 50%, transparent);
+}
+
+.bonusOk,
+.bonusBad {
+  padding: 12px 14px;
+  border-radius: 12px;
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.bonusOk {
+  background: var(--lab-tint);
+  border: 1.5px solid var(--lab);
+}
+
+.bonusBad {
+  background: var(--warn-bg);
+  color: var(--warn-fg);
+}
+
+@media (max-width: 1280px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .banner {
+    flex-wrap: wrap;
+  }
+
+  .digit,
+  .digitEmpty {
+    width: 44px;
+    height: 54px;
+  }
+}
+
+.cells {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--secondary);
+}
+
+.temp {
+  flex-shrink: 0;
+  padding: 6px 10px;
+  border-radius: 8px;
+  background: var(--lab);
+  color: #ffffff;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 14px;
+}

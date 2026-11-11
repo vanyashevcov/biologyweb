@@ -1,0 +1,64 @@
+.table {
+  border-collapse: separate;
+  border-spacing: 6px;
+  margin: -6px;
+  font-size: 16px;
+  width: calc(100% + 12px);
+}
+
+.corner {
+  width: 64px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.header {
+  height: 44px;
+  background: var(--lab-tint);
+  border-radius: 8px;
+  font-family: var(--font-mono);
+  font-weight: 700;
+}
+
+.cell {
+  padding: 0;
+}
+
+.input {
+  width: 100%;
+  height: 52px;
+  border-radius: 8px;
+  border: 2px dashed var(--ink);
+  background: var(--panel);
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 16px;
+  color: var(--ink);
+  padding: 0 4px;
+}
+
+.input:not(:placeholder-shown) {
+  border-style: solid;
+  border-width: 1.5px;
+}
+
+.input:disabled {
+  background: var(--panel-soft);
+}
+
+.ok {
+  border: 2px solid var(--lab);
+  background: var(--lab-tint);
+}
+
+.ok:disabled {
+  background: var(--lab-tint);
+  color: var(--ink);
+}
+
+.error {
+  border: 2px solid var(--spread);
+  background: var(--warn-bg);
+}

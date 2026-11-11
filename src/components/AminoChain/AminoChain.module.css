@@ -1,0 +1,101 @@
+.chain {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.link {
+  color: var(--ink);
+  flex: 0 0 auto;
+}
+
+.pill {
+  min-height: 48px;
+  padding: 0 16px;
+  border-radius: var(--r-chip);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.fixed {
+  border: 1.5px solid rgba(16, 40, 43, 0.35);
+  color: var(--muted);
+}
+
+.stop {
+  background: var(--dark);
+  color: var(--on-dark);
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.slot {
+  position: relative;
+  padding: 0 10px 0 12px;
+  border: 2px dashed var(--line-dashed);
+  background: var(--panel);
+}
+
+.select {
+  height: 44px;
+  width: 150px;
+  border: 0;
+  background: transparent;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--ink);
+  padding: 0 4px;
+}
+
+.select:disabled {
+  opacity: 1;
+  cursor: default;
+}
+
+.codon {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+}
+
+.ok {
+  border-style: solid;
+  border-color: var(--lab);
+  background: var(--lab);
+}
+
+.ok .select,
+.ok .codon {
+  color: #ffffff;
+}
+
+.ok .select option {
+  color: var(--ink);
+}
+
+.error {
+  border-style: solid;
+  border-color: var(--spread);
+  background: var(--warn-bg);
+}
+
+@media (max-width: 480px) {
+  .select {
+    width: 124px;
+    font-size: 14px;
+  }
+}

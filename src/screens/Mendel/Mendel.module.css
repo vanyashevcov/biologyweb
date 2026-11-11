@@ -1,0 +1,71 @@
+.pedigree {
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+}
+
+.pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.geno {
+  width: 100%;
+  height: 52px;
+  border-radius: 8px;
+  border: 1.5px solid var(--ink);
+  background: var(--panel);
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 16px;
+  color: var(--ink);
+}
+
+.geno:placeholder-shown {
+  border: 2px dashed var(--ink);
+}
+
+.genoOk,
+.genoOk:disabled {
+  border: 2px solid var(--lab);
+  background: var(--lab-tint);
+  color: var(--ink);
+}
+
+.inserts {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.insert {
+  min-width: 52px;
+  height: 44px;
+  padding: 0 14px;
+  border-radius: 8px;
+  border: 1px solid rgba(16, 40, 43, 0.3);
+  background: var(--lab-tint);
+  font-family: var(--font-mono);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.insert:hover {
+  border-color: var(--lab);
+}
+
+@media (max-width: 760px) {
+  .pedigree {
+    flex-direction: column;
+  }
+}

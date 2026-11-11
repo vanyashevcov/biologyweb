@@ -1,0 +1,199 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background: rgba(16, 40, 43, 0.55);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: max(16px, env(safe-area-inset-top, 0px)) 16px 16px;
+  overflow-y: auto;
+}
+
+.dialog {
+  background: var(--panel);
+  border-radius: var(--r-card);
+  width: 100%;
+  max-width: 560px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100vh - 32px);
+}
+
+.wide {
+  max-width: 920px;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 22px;
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  background: var(--panel);
+  border-radius: var(--r-card) var(--r-card) 0 0;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.close {
+  min-height: var(--touch);
+  padding: 0 16px;
+  border-radius: var(--r-control);
+  border: 1.5px solid var(--ink);
+  background: var(--panel);
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  flex: 0 0 auto;
+}
+
+.close:hover {
+  background: var(--panel-soft);
+}
+
+.body {
+  padding: 22px;
+  overflow-y: auto;
+}
+
+@media (max-width: 480px) {
+  .head,
+  .body {
+    padding: 16px;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+}
+
+.backdropAlarm {
+  background:
+    radial-gradient(ellipse at center, rgba(16, 40, 43, 0.55) 30%, rgba(120, 18, 14, 0.82) 100%);
+  animation: backdropIn 260ms ease-out both;
+}
+
+.alarm {
+  position: relative;
+  overflow: hidden;
+  border: 2px solid var(--spread);
+  box-shadow:
+    0 0 0 6px rgba(184, 50, 42, 0.18),
+    0 24px 60px rgba(60, 8, 6, 0.55);
+  animation:
+    dialogIn 520ms cubic-bezier(0.2, 1.4, 0.4, 1) both,
+    alarmGlow 1.6s ease-in-out 520ms infinite;
+}
+
+.alarm::before {
+  content: '';
+  display: block;
+  height: 10px;
+  flex: 0 0 auto;
+  background: repeating-linear-gradient(-45deg, #f2c230 0 14px, var(--ink) 14px 28px);
+  background-size: 40px 10px;
+  animation: stripes 900ms linear infinite;
+}
+
+.alarm .head {
+  background: var(--spread);
+  color: #fff;
+  border-radius: 0;
+  border-bottom: none;
+  justify-content: flex-start;
+}
+
+.alarm .title {
+  flex: 1 1 auto;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.alarm .close {
+  border-color: #fff;
+  background: transparent;
+  color: #fff;
+}
+
+.alarm .close:hover {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.beacon {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.beacon::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  animation: beacon 1.1s ease-out infinite;
+}
+
+@keyframes backdropIn {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes dialogIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.7) translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes alarmGlow {
+  50% {
+    box-shadow:
+      0 0 0 12px rgba(184, 50, 42, 0.08),
+      0 0 40px 6px rgba(184, 50, 42, 0.45),
+      0 24px 60px rgba(60, 8, 6, 0.55);
+  }
+}
+
+@keyframes stripes {
+  to {
+    background-position: 40px 0;
+  }
+}
+
+@keyframes beacon {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(2.8);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .backdropAlarm,
+  .alarm,
+  .alarm::before,
+  .beacon::after {
+    animation: none;
+  }
+}

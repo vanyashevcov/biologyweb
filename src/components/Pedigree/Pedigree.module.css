@@ -1,0 +1,58 @@
+.svg {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+}
+
+.personLabel {
+  font-family: var(--font-body);
+  font-size: 13px;
+  fill: var(--muted);
+}
+
+.generation {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+  fill: var(--ink);
+}
+
+.question {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  fill: var(--spread);
+}
+
+.legend {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 14px;
+  line-height: 1.45;
+  padding-top: 8px;
+  min-width: 190px;
+}
+
+.legendTitle {
+  font-size: 15px;
+}
+
+.legendRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.legendIcon {
+  flex: 0 0 auto;
+}
+
+.note {
+  color: var(--muted);
+}
+
+.highlight {
+  fill: var(--lab);
+  font-weight: 700;
+}

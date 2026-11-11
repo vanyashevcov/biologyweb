@@ -1,0 +1,63 @@
+.svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  font-family: var(--font-body);
+}
+
+.grid path {
+  stroke: var(--ink);
+  stroke-opacity: 0.08;
+}
+
+.dayTicks path {
+  stroke: var(--ink);
+  stroke-opacity: 0.45;
+  stroke-width: 1;
+}
+
+.axis {
+  stroke: var(--ink);
+  stroke-width: 1.5;
+  fill: none;
+}
+
+.primary {
+  stroke: #7c9ac9;
+  stroke-width: 3.5;
+  fill: none;
+}
+
+.secondary {
+  stroke: var(--lab);
+  stroke-width: 4;
+  fill: none;
+}
+
+.tickLabels text,
+.axisLabel {
+  font-size: 13px;
+  fill: var(--muted);
+}
+
+.event path {
+  stroke: var(--ink);
+  stroke-width: 2;
+}
+
+.event text {
+  font-size: 13px;
+  font-weight: 700;
+  fill: var(--ink);
+}
+
+.primaryLabel {
+  font-size: 13px;
+  fill: var(--muted);
+}
+
+.secondaryLabel {
+  font-size: 13px;
+  font-weight: 700;
+  fill: var(--lab);
+}

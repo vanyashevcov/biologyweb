@@ -1,0 +1,64 @@
+.card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px 8px 8px;
+  border-radius: 12px;
+  border: 1.5px solid var(--ink);
+  background: var(--panel);
+  text-align: left;
+  font-family: var(--font-body);
+  color: var(--ink);
+  touch-action: none;
+  max-width: 100%;
+}
+
+button.card:hover {
+  background: var(--lab-tint);
+}
+
+.selected {
+  border: 2px solid var(--lab);
+  background: var(--lab-tint);
+  box-shadow: 0 0 0 3px var(--lab-tint);
+}
+
+.dragging {
+  position: relative;
+  z-index: 20;
+  box-shadow: var(--shadow-float);
+  cursor: grabbing;
+}
+
+.placed {
+  border-color: var(--lab);
+  width: 100%;
+}
+
+.icon {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: #f8f1f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.name {
+  font-size: 15px;
+  line-height: 1.25;
+}
+
+.trait {
+  font-size: 12px;
+  color: var(--muted);
+}

@@ -1,0 +1,89 @@
+
+@font-face {
+  font-family: 'Unbounded Fallback';
+  src: local('Arial');
+  size-adjust: 125%;
+  ascent-override: 78%;
+  descent-override: 19%;
+  line-gap-override: 0%;
+}
+
+:root {
+  --bg: #eff3f2;
+  --grid-line: rgba(16, 40, 43, 0.035);
+  --panel: #ffffff;
+  --panel-soft: #f1f4f4;
+  --panel-rack: #f6f8f8;
+  --line: rgba(16, 40, 43, 0.12);
+  --line-strong: rgba(16, 40, 43, 0.25);
+  --line-dashed: rgba(16, 40, 43, 0.4);
+
+  --ink: #10282b;
+  --muted: #4a6064;
+  --secondary: #22403f;
+  --on-dark: #eaf3f2;
+  --on-dark-muted: #a9c4c2;
+  --on-dark-accent: #8fd3cc;
+  --on-dark-bad: #f4b3ac;
+
+  --spread: #b8322a;
+  --warn-bg: #fbeae8;
+  --warn-fg: #7e1f18;
+  --gauge-track: #d5dddc;
+  --locked: #9aaaad;
+
+  --lab: #0b7a75;
+  --lab-tint: #dcefec;
+
+  --lab1: #0b7a75;
+  --lab1-tint: #dcefec;
+  --lab2: #8e2f7a;
+  --lab2-tint: #f1e1ec;
+  --lab3: #2f5fa8;
+  --lab3-tint: #e0e8f5;
+  --lab4: #2e7f9e;
+  --lab4-tint: #ddf1f7;
+  --lab5: #5e7a1f;
+  --lab5-tint: #e8efd9;
+
+  --nt-a-bg: #2f6fb0;
+  --nt-a-fg: #ffffff;
+  --nt-t-bg: #e3a04f;
+  --nt-t-fg: #10282b;
+  --nt-g-bg: #2e7d4f;
+  --nt-g-fg: #ffffff;
+  --nt-c-bg: #7b4fa0;
+  --nt-c-fg: #ffffff;
+
+  --dark: #10282b;
+  --micro: #26343a;
+
+  --font-display: 'Unbounded', 'Unbounded Fallback', 'Onest', 'Segoe UI', sans-serif;
+  --font-body: 'Onest', 'Segoe UI', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Cascadia Mono', 'Consolas', monospace;
+
+  --r-card: 14px;
+  --r-control: 10px;
+  --r-nt: 7px;
+  --r-chip: 24px;
+
+  --touch: 44px;
+
+  --page-pad: 40px;
+  --gap: 16px;
+
+  --shadow-float: 0 10px 28px rgba(16, 40, 43, 0.3);
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@media (max-width: 900px) {
+  :root {
+    --page-pad: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --page-pad: 16px;
+  }
+}

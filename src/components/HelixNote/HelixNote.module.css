@@ -1,0 +1,107 @@
+.note {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 16px 18px;
+  border-radius: 12px;
+  background: var(--dark);
+  color: var(--on-dark);
+}
+
+.icon {
+  flex-shrink: 0;
+  color: var(--on-dark-accent);
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.label {
+  font-size: 13px;
+  color: var(--on-dark-accent);
+}
+
+.text {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.bad,
+.info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: var(--warn-bg);
+  color: var(--warn-fg);
+}
+
+.info {
+  background: var(--lab-tint);
+  color: var(--ink);
+}
+
+.chip {
+  flex-shrink: 0;
+  min-width: 52px;
+  height: 36px;
+  padding: 0 10px;
+  border-radius: 18px;
+  background: var(--spread);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.noticeText {
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.ok {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: var(--lab-tint);
+  border: 1.5px solid var(--lab);
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.okIcon {
+  flex-shrink: 0;
+  color: var(--lab);
+}
+
+.noticeText {
+  flex-grow: 1;
+}
+
+.dismiss {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  margin: -8px -8px -8px 0;
+  border: 0;
+  border-radius: 22px;
+  background: transparent;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dismiss:hover {
+  background: rgba(16, 40, 43, 0.08);
+}

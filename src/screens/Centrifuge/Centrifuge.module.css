@@ -1,0 +1,69 @@
+.intro {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.rotor {
+  flex-shrink: 0;
+}
+
+.spin {
+  transform-origin: 60px 60px;
+  animation: spin 9s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spin {
+    animation: none;
+  }
+}
+
+.legend {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  font-size: 14px;
+}
+
+.legendRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.thymine {
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: var(--warn-bg);
+  color: var(--warn-fg);
+  font-size: 15px;
+}
+
+@media (max-width: 600px) {
+  .intro {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .rotor {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.strands {
+  --nt-w: 36px;
+  --nt-h: 46px;
+  --codon-gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}

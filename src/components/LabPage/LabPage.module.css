@@ -1,0 +1,27 @@
+.done {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 18px 20px;
+  border-radius: var(--r-card);
+  background: var(--lab-tint);
+  border: 2px solid var(--lab);
+}
+
+.doneLabel {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 18px;
+}
+
+@media (max-width: 1100px) {
+  .noticeSlot {
+    position: fixed;
+    left: 16px;
+    right: 100px;
+    bottom: calc(24px + env(safe-area-inset-bottom, 0px));
+    z-index: 40;
+    box-shadow: var(--shadow-float);
+    border-radius: 12px;
+  }
+}

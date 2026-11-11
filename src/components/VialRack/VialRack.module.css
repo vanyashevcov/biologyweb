@@ -1,0 +1,16 @@
+.rack {
+  display: flex;
+  align-items: flex-end;
+  flex-shrink: 0;
+}
+
+.framed {
+  padding: 6px 12px;
+  border-radius: var(--r-control);
+  background: var(--panel-rack);
+  border: 1px solid var(--line);
+}
+
+.large {
+  display: block;
+}

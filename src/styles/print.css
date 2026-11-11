@@ -1,0 +1,83 @@
+
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 14mm;
+  }
+
+  html,
+  body {
+    background: #ffffff !important;
+    background-image: none !important;
+    color: #000000;
+    font-size: 11pt;
+  }
+
+  [data-print='area'] table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  [data-print='area'] th,
+  [data-print='area'] td {
+    border: 0.3mm solid #000000 !important;
+    padding: 1.2mm 2mm !important;
+    font-size: 10pt;
+  }
+
+  [data-print='hide'] {
+    display: none !important;
+  }
+
+  body:has([data-print='area']) [data-print='chrome'] {
+    display: none !important;
+  }
+
+  [data-print='area'] {
+    background: #ffffff !important;
+    color: #000000 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    border: 0 !important;
+  }
+
+  [data-print='area'] * {
+    background: transparent !important;
+    color: #000000 !important;
+    box-shadow: none !important;
+  }
+
+  [data-print='area'] h1 {
+    font-size: 18pt;
+    margin-bottom: 4mm;
+  }
+
+  [data-print='area'] h2 {
+    font-size: 12.5pt;
+    margin-top: 4mm;
+    margin-bottom: 1.5mm;
+    border-bottom: 0.4mm solid #000000;
+    padding-bottom: 1mm;
+  }
+
+  [data-print='area'] li,
+  [data-print='area'] p {
+    font-size: 10pt;
+    line-height: 1.35;
+  }
+
+  [data-print='area'] section,
+  [data-print='area'] li {
+    break-inside: avoid;
+  }
+
+  [data-print='area'] a::after {
+    content: '';
+  }
+
+  [data-print='area'] [data-print='framed'] {
+    border: 0.3mm solid #000000 !important;
+    padding: 2mm 3mm;
+  }
+}

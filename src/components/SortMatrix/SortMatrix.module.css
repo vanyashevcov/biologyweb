@@ -1,0 +1,127 @@
+.matrix {
+  display: grid;
+  grid-template-columns: 70px repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.row {
+  display: contents;
+}
+
+.corner {
+  display: block;
+}
+
+.colHead {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 15px;
+  text-align: center;
+  padding: 8px;
+  border-radius: 8px;
+  background: var(--lab-tint);
+}
+
+.rowHead {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: var(--lab-tint);
+}
+
+.cell {
+  min-height: 130px;
+  padding: 10px;
+  border-radius: 12px;
+  border: 1.5px solid rgba(16, 40, 43, 0.18);
+  background: var(--panel);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: stretch;
+  min-width: 0;
+  transition:
+    border-color 150ms ease,
+    background-color 150ms ease;
+}
+
+.empty {
+  border: 2px dashed color-mix(in srgb, var(--lab) 45%, transparent);
+  background: rgba(255, 255, 255, 0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.over {
+  border: 2px solid var(--lab);
+  background: var(--lab-tint);
+}
+
+.cellCaption {
+  display: none;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--lab);
+}
+
+.hint {
+  font-size: 13px;
+  color: var(--muted);
+  text-align: center;
+}
+
+.place {
+  min-height: 44px;
+  padding: 0 12px;
+  border-radius: var(--r-control);
+  border: 2px dashed var(--lab);
+  background: var(--panel);
+  color: var(--ink);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.place:hover {
+  background: var(--lab-tint);
+}
+
+@media (max-width: 760px) {
+  .matrix {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .corner,
+  .colHead {
+    display: none;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 10px;
+    border-radius: 12px;
+    background: var(--lab-tint);
+  }
+
+  .rowHead {
+    justify-content: flex-start;
+    padding: 4px 6px;
+  }
+
+  .cell {
+    min-height: 90px;
+  }
+
+  .empty {
+    align-items: stretch;
+  }
+
+  .cellCaption {
+    display: block;
+  }
+}

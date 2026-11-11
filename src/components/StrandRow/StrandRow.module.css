@@ -1,0 +1,145 @@
+.row {
+  display: grid;
+  grid-template-columns: 124px minmax(0, 1fr);
+  align-items: center;
+  gap: 12px;
+}
+
+.legend {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.label {
+  font-size: 15px;
+}
+
+.direction {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.codons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--codon-gap, 14px);
+}
+
+.codonGroup {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 auto;
+}
+
+.codon {
+  display: flex;
+  gap: 4px;
+  flex: 0 0 auto;
+}
+
+.bondRow {
+  display: flex;
+  gap: 4px;
+  height: 16px;
+}
+
+.blank {
+  width: var(--nt-w, 44px);
+  height: var(--nt-h, 52px);
+  flex: 0 0 auto;
+  border-radius: var(--r-nt);
+  border: 2px dashed var(--ink);
+  background: var(--panel);
+  text-align: center;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--ink);
+  padding: 0;
+}
+
+.blank:disabled {
+  background: var(--panel-soft);
+  border-color: var(--line-strong);
+  color: var(--muted);
+  cursor: not-allowed;
+}
+
+.ok {
+  border-style: solid;
+  border-color: var(--lab);
+  background: var(--lab-tint);
+}
+
+.error {
+  border-style: solid;
+  border-color: var(--spread);
+  background: var(--warn-bg);
+}
+
+.bondSlot {
+  width: var(--nt-w, 44px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bond {
+  width: 2px;
+  height: 14px;
+  background: var(--line-dashed);
+}
+
+@media (max-width: 900px) {
+  .row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 8px;
+  }
+
+  .legend {
+    flex-direction: row;
+    align-items: baseline;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 720px) {
+  .blank {
+    width: 38px;
+    height: 46px;
+    font-size: 18px;
+  }
+
+  .bondSlot {
+    width: 38px;
+  }
+
+  .codons {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .blank {
+    width: 32px;
+    height: 42px;
+    font-size: 16px;
+  }
+
+  .bondSlot {
+    width: 32px;
+  }
+}
+
+.stacked {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 6px;
+}
+
+.stacked .legend {
+  flex-direction: row;
+  align-items: baseline;
+  gap: 8px;
+}

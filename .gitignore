@@ -1,0 +1,8 @@
+node_modules
+dist
+.DS_Store
+*.local
+.vite
+
+# Джерело правильних відповідей — не потрапляє в репозиторій і в збірку.
+answers.source.json

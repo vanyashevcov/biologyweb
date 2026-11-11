@@ -1,0 +1,59 @@
+.tile {
+  width: var(--nt-w, 44px);
+  height: var(--nt-h, 52px);
+  flex: 0 0 auto;
+  border-radius: var(--r-nt);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.a {
+  background: var(--nt-a-bg);
+  color: var(--nt-a-fg);
+}
+
+.t {
+  background: var(--nt-t-bg);
+  color: var(--nt-t-fg);
+}
+
+.g {
+  background: var(--nt-g-bg);
+  color: var(--nt-g-fg);
+}
+
+.c {
+  background: var(--nt-c-bg);
+  color: var(--nt-c-fg);
+}
+
+.unknown {
+  background: var(--gauge-track);
+  color: var(--ink);
+}
+
+.small {
+  width: 28px;
+  height: 32px;
+  font-size: 14px;
+}
+
+@media (max-width: 720px) {
+  .tile:not(.small) {
+    width: 38px;
+    height: 46px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 400px) {
+  .tile:not(.small) {
+    width: 32px;
+    height: 42px;
+    font-size: 16px;
+  }
+}
